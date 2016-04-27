@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>欢迎来到我的博客</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Quickly Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="../Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/about.js" type="text/javascript"></script>
+<!-- //js -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body>
+<!-- banner-body -->
+	<div class="banner-body abt">
+		<div class="container">
+<!-- header -->
+			<div class="header">
+				<div class="header-nav">
+					<nav class="navbar navbar-default">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+                            <a class="navbar-brand" href="index.html"><span>K</span>oBe-MVP</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+						 <ul class="nav navbar-nav">
+                       <li class="hvr-bounce-to-bottom"><a href="index.html">主页</a></li>
+                       <li class="hvr-bounce-to-bottom active"><a href="TopicContent.html">主贴</a></li>
+                       <li class="hvr-bounce-to-bottom"><a href="Portfolio.html">板块</a></li>
+                       <li class="hvr-bounce-to-bottom"><a href="Pages.html">记录</a></li>
+                       <li class="hvr-bounce-to-bottom"><a href="contact.html">关于博客</a></li>
+						  </ul>
+						  <div class="sign-in">
+							<ul>
+								<li><a href="login.html">登录 </a>/</li>
+								<li><a href="register.html">注册</a></li>
+							</ul>
+							</div>
+						</div><!-- /.navbar-collapse -->
+					</nav>
+				</div>
+	
+			<!-- search-scripts -->
+			<script src="js/classie.js"></script>
+			<script src="js/uisearch.js"></script>
+				<!--<script>
+					new UISearch( document.getElementById( 'sb-search' ) );
+				</script>-->
+			<!-- //search-scripts -->
+			</div>
+<!-- //header -->
+<!-- about-page -->
+    <div class="about">
+		    <div id="showabout">
+                
+            </div><!--从后台读取数据-->
+	    
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">编辑回帖</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form name="form1" method="" action="">
+                            <input type="text" value="请输入您的回帖主题" style="width:100%" name="replytitle" id="replytitle" /><br />
+                            <br />
+                            <textarea name="txtreply" id="txtreply" style="width:100%;height:10em"></textarea><br />
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" id="replysubmit" onclick="reply()">回帖</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--modal end-->
+			    <div class="about-team" style="margin-top:8em">
+				    <div class="about-text">
+					    <h3 class="ind" style="text-align:center">科比精彩镜头</h3>
+				    </div>	
+				    <div class="row">
+					    <div class="col-sm-6 col-md-3 about-team-grids">
+						    <div class="thumbnail">
+							    <img src="images/better1.jpg" alt="" class="img-responsive" />
+							
+						    </div>
+					    </div>
+					    <div class="col-sm-6 col-md-3 about-team-grids">
+						    <div class="thumbnail">
+							    <img src="images/better2.jpg" alt="" class="img-responsive" />
+						    </div>
+					    </div>
+					    <div class="col-sm-6 col-md-3 about-team-grids">
+						    <div class="thumbnail">
+							    <img src="images/better3.png" alt="" class="img-responsive" />
+						    </div>
+					    </div>
+					    <div class="col-sm-6 col-md-3 about-team-grids">
+						    <div class="thumbnail">
+							    <img src="images/better4.jpg" alt=""class="img-responsive" />
+						    </div>
+					    </div>
+					    <div class="clearfix"> </div>
+				    </div>
+			    </div>
+			    <div class="advantages">
+				    <h3>科比和他的团队</h3>
+				    <div class="advantag-main">
+					    <div class="advan-top">
+						    <div class="col-md-6 advantage-left">
+							    <div class="col-md-4 advan-cup">
+								
+							    </div>
+							     <div class="col-md-8 advan-text">
+									    <h4><a href="single.html">洛杉矶湖人队</a></h4>
+									    <p>进入NBA：1947年<br/>主球场：斯台普斯中心 <br />分区：太平洋<br />赛区官网链接 http://www.nba.com/lakers/ <br />主教练：拜伦-斯科特</p>
+							     </div>	
+						      <div class="clearfix"> </div>
+						    </div>
+						<div class="col-md-6 advantage-right">
+							<div class="col-md-4 advan-ser">
+								
+							</div>
+							 <div class="col-md-8 advan-text">
+									<h4><a href="single.html">科比-布莱恩特</a></h4>
+									<p>美国职业篮球运动员，自1996年起效力于NBA洛杉矶湖人队</p>
+							 </div>	
+						  <div class="clearfix"> </div>
+						</div>
+					<div class="clearfix"> </div>
+					</div>
+					<div class="advan-bott">
+						<div class="col-md-6 advantage-left">
+							<div class="col-md-4 advan-mach">
+								
+							</div>
+							 <div class="col-md-8 advan-text">
+									<h4><a href="single.html">罗伊·希伯特</a></h4>
+									<p>美国NBA联盟的职业篮球运动员，司职中锋，效力于NBA洛杉矶湖人队</p>
+							 </div>	
+						  <div class="clearfix"> </div>
+						</div>
+						<div class="col-md-6 advantage-right">
+							<div class="col-md-4 advan-tin">
+								
+							</div>
+							 <div class="col-md-8 advan-text">
+									<h4><a href="single.html">路易斯·威廉姆斯</a></h4>
+									<p>美国职业篮球运动员，司职控球后卫，效力于洛杉矶湖人队。2015赛季的最佳第六人。</p>
+							 </div>	
+						  <div class="clearfix"> </div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+        <!-- Button trigger modal -->
+        <p style="text-align:right">
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                编辑回帖
+            </button>
+        </p>
+		</div><!-- //about-page -->
+    </div>
+<!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-grids">
+                <div class="col-md-3 footer-grid">
+                    <h3><span>K</span>oBe-MVP</h3>
+                    <div class="footer-grd-left">
+                        <img src="images/11.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="footer-grd-left">
+                        <p>
+                            即使你不懂篮球，不认识科比，但你不能避免朋友圈被有关他的消息刷屏；即使你不能理解粉丝的疯狂，但你一定听说过他的两句话——“你见过凌晨4点的洛杉矶么？”“总是有人要赢的，那为什么不能是我呢？”
+                        </p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h3><span>K</span>oBe-MVP</h3>
+                    <ul>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h3><span>K</span>oBe-MVP</h3>
+                    <ul>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                        <li><a href="#">总是有人要赢，为什么不能是我呢？</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h3>Photos</h3>
+                    <div class="footer-grd">
+                        <img src="images/dq2C-fxriqqx2535898.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="footer-grd">
+                        <img src="images/p1.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="footer-grd">
+                        <img src="images/p2.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="footer-grd">
+                        <img src="images/p3.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="footer-grd">
+                        <img src="images/p4.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="footer-grd">
+                        <img src="images/p5.jpg" class="img-responsive" alt=" " />
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2016 Quickly. All rights reserved | Design by <a href="#"> Fu_Shan</a></p>
+        </div>
+    </div>
+<!-- //footer -->
+<!-- for bootstrap working -->
+		<script src="js/bootstrap.js"> </script>
+<!-- //for bootstrap working -->
+</body>
+</html>
