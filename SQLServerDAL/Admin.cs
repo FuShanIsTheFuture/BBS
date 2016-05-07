@@ -34,7 +34,7 @@ namespace SQLServerDAL
            ,[UPoint])
      VALUES
            ('{0}','{1}','{2}','{3}',{4},{5},'{6}','{7}',{8},'{9}')",
-            model.Uname,model.UPassword,model.UEmail,model.UBirthday,sex1,0,model.UStatement,model.URegDate,1,0
+            model.Uname,model.UPassword,model.UEmail,model.UBirthday,sex1,0,model.UStatement,model.URegDate,model.UState,0
            );//为用户表增加数据
             //sql 字符串类型的值要用‘’。数字、日期类型不需要‘’
             string sql1 = string.Format(@"select top 1 Uid from BBSUsers where Uname='{0}'",model.Uname);
@@ -129,6 +129,28 @@ namespace SQLServerDAL
             else
             {
                 return null;
+            }
+        }
+        /// <summary>
+        /// 判断是否为管理员
+        /// </summary>
+        /// <param name="n">用户编号</param>
+        /// <returns>管理员编号</returns>
+        public int IfAdmin(int n)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  top 1 UState ");
+            strSql.Append(" from BBSUsers ");
+            strSql.Append(" where Uid="+n+"");
+
+            object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            if (obj == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
             }
         }
 

@@ -9,7 +9,7 @@ namespace WEB.Admin.ashx
     /// <summary>
     /// pages 的摘要说明
     /// </summary>
-    public class pages : IHttpHandler
+    public class pages : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -24,8 +24,17 @@ namespace WEB.Admin.ashx
                 ds.Tables[0].TableName = "Admin";//为数据表改名
                                                  //返回列表
                 json = WEB.DataConvertJson.DataTable2Json(ds.Tables[0]);//调用把datatable转为json的方法
+                context.Response.Write(json);
             }
-            context.Response.Write(json);
+            else if (action == "Load")//检查是否已经登录
+            {
+                if (context.Session["ID"] == null)
+                {
+                    json = "{'info':'no'}";
+                }
+                context.Response.Write(json);
+            }
+            
         }
 
         public bool IsReusable

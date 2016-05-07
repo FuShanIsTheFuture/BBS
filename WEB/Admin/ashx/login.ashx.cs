@@ -24,11 +24,14 @@ namespace WEB.Admin.ashx
 
             BLL.Admin bll = new BLL.Admin();
             int n = bll.Login(txtUserName, txtPassWord);
+            int ifadmin = bll.IfAdmin(n);
             //返回单个文字信息
             if (n > 0)
             {
                 json = "{'info':'登录成功！','ID':" + n + "}";
                 context.Session["ID"] = n;
+                context.Session["Name"] = txtUserName;
+                context.Session["UState"] = ifadmin;
             }
             context.Response.Write(json);
 

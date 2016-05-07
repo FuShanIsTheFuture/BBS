@@ -36,6 +36,13 @@ namespace IDAL
         /// <param name="Uid">用户id</param>
         /// <returns>对象实体</returns>
         Model.Admin GetModel(int Uid);
+
+        /// <summary>
+        /// 判断是否为管理员
+        /// </summary>
+        /// <param name="n">用户编号</param>
+        /// <returns>管理员编号</returns>
+        int IfAdmin(int n);
       
     }
 }

@@ -28,6 +28,13 @@ ul,label{
 	margin:0;
 	padding:0;
 }
+/*#AdminPlay{
+    float:right;
+    color:#777;
+}*/
+#AdminPlay:hover{
+    color:#333;
+}
 body a:hover{
 	text-decoration:none;
 }
@@ -38,6 +45,14 @@ body a:hover{
 }
 /*-- //banner-body --*/
 /*-- header --*/
+#ifr{
+    height:52px;
+    width:100%;
+    display:block;
+    margin:0px;
+}
+
+
 .navbar-default {
   background:none !important;
   border-color:none !important;
@@ -147,7 +162,6 @@ a.navbar-brand:hover {
 }
 .header-bottom-top{
 	float:right;
-    margin-bottom:1em;
 }
 .header-bottom-top ul{
 	padding:1em 0;
@@ -196,6 +210,12 @@ a.navbar-brand:hover {
 .header-bottom-top ul li a.twitter:hover{
 	background: url(../images/img-sp.png) no-repeat -96px -152px;
 	display: block;
+}
+.header-bottom-top-left{
+    font-family:LobsterTwo-Regular;
+    float:left;
+    height:71px;
+    line-height:65px;
 }
 /*-- banner --*/
 .banner{
@@ -1858,9 +1878,7 @@ p.lom{
 	.sign-up {
 		width: 90%;
 	}
-	.portfolio {
-	  min-height: 1060px;
-	}
+	
 	.navbar-default .navbar-nav > li > a {
 		font-size: 17px;
 	}

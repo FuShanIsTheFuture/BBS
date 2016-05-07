@@ -176,6 +176,7 @@
     <Content Include="Admin\index.html" />
     <Content Include="Admin\js\about.js" />
     <Content Include="Admin\js\add.js" />
+    <Content Include="Admin\js\AdminPlay.js" />
     <Content Include="Admin\js\bootstrap.js" />
     <Content Include="Admin\js\easyResponsiveTabs.js" />
     <Content Include="Admin\js\exit.js" />
@@ -185,21 +186,25 @@
     <Content Include="Admin\js\jquery.swipebox.min.js" />
     <Content Include="Admin\js\list.js" />
     <Content Include="Admin\js\login.js" />
+    <Content Include="Admin\js\nav.js" />
     <Content Include="Admin\js\pages.js" />
     <Content Include="Admin\js\PShow.js" />
-    <Content Include="Admin\js\register.js" />
+    <Content Include="Admin\js\NewUser.js" />
     <Content Include="Admin\js\responsiveslides.min.js" />
     <Content Include="Admin\js\show.js" />
+    <Content Include="Admin\js\ReplyList.js" />
     <Content Include="Admin\js\test.js" />
     <Content Include="Admin\js\TopicContent.js" />
     <Content Include="Admin\login.html" />
+    <Content Include="Admin\nav.html" />
     <Content Include="Admin\PShow.html" />
-    <Content Include="Admin\pages.html" />
-    <Content Include="Admin\portfolio.html" />
-    <Content Include="Admin\register.html" />
+    <Content Include="Admin\Admin\pages.html" />
+    <Content Include="Admin\Section.html" />
+    <Content Include="Admin\NewUser.html" />
     <Content Include="Admin\show.html" />
+    <Content Include="Admin\ReplyList.html" />
     <Content Include="Admin\single.html" />
-    <Content Include="Admin\TopicContent.html" />
+    <Content Include="Admin\MainTopic.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\admin.css" />
     <Content Include="Content\bootstrap.css" />
@@ -216,12 +221,15 @@
     <Content Include="Admin\font\LobsterTwo-Italic.ttf" />
     <Content Include="Admin\font\LobsterTwo-Regular.ttf" />
     <Content Include="Admin\font\OpenSans-Regular.ttf" />
-    <Content Include="Admin\ashx\register.ashx" />
     <Content Include="Admin\ashx\pages.ashx" />
     <Content Include="Admin\ashx\SHOW.ashx" />
     <Content Include="Admin\ashx\TopicContent.ashx" />
     <Content Include="Admin\ashx\ABOUT.ashx" />
     <Content Include="Admin\ashx\PShow.ashx" />
+    <Content Include="Admin\ashx\ShowAbout.ashx" />
+    <Content Include="Admin\ashx\NewUser.ashx" />
+    <Content Include="Admin\ashx\nav.ashx" />
+    <Content Include="Admin\ashx\AdminPlay.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="H1.html" />
     <Content Include="Scripts\bootstrap.js" />
@@ -258,7 +266,9 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -275,6 +285,9 @@
     <Compile Include="Admin\ashx\ABOUT.ashx.cs">
       <DependentUpon>ABOUT.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ashx\AdminPlay.ashx.cs">
+      <DependentUpon>AdminPlay.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ashx\exit.ashx.cs">
       <DependentUpon>exit.ashx</DependentUpon>
     </Compile>
@@ -284,17 +297,23 @@
     <Compile Include="Admin\ashx\login.ashx.cs">
       <DependentUpon>login.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ashx\nav.ashx.cs">
+      <DependentUpon>nav.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ashx\NewUser.ashx.cs">
+      <DependentUpon>NewUser.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ashx\pages.ashx.cs">
       <DependentUpon>pages.ashx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ashx\PShow.ashx.cs">
       <DependentUpon>PShow.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ashx\register.ashx.cs">
-      <DependentUpon>register.ashx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\ashx\SHOW.ashx.cs">
       <DependentUpon>SHOW.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ashx\ShowAbout.ashx.cs">
+      <DependentUpon>ShowAbout.ashx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ashx\test.ashx.cs">
       <DependentUpon>test.ashx</DependentUpon>

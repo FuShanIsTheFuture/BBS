@@ -6,13 +6,14 @@ using System.Web;
 namespace WEB.Admin.ashx
 {
     /// <summary>
-    /// Add 的摘要说明
+    /// NewUser 的摘要说明
     /// </summary>
-    public class register : IHttpHandler, System.Web.SessionState.IRequiresSessionState
+    public class NewUser : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
         {
+
             context.Response.ContentType = "text/plain";
 
             string json = "{'info':'增加数据失败'}";
@@ -28,12 +29,14 @@ namespace WEB.Admin.ashx
                 string adminSex = context.Request.Form["sex"];
                 string txtbirthday = context.Request.Form["birthday"];
                 string txtstatement = context.Request.Form["Statement"];
+                string ustate = context.Request.Form["Ustate"];
 
 
                 Model.Admin model = new Model.Admin();
                 model.Uname = txtUserName;//用户姓名
                 model.UPassword = txtPassWord;//用户密码
                 model.UEmail = txtemail;//用户邮箱
+                model.UState = int.Parse(ustate);
                 //用户生日
                 string y = txtbirthday.Substring(0, 4);
                 string m = txtbirthday.Substring(4, 2);
@@ -51,16 +54,17 @@ namespace WEB.Admin.ashx
                 //返回单个文字信息
                 if (n > 0) { json = "{'info':'增加数据成功,编号是：" + n + "'}"; }
             }
-            else if (action == "Load")
-            {
-                if (context.Session["ID"] == null)
-                {
-                    json = "{'info':'no'}";
-                }
+            //else if (action == "Load")
+            //{
+            //    if (context.Session["ID"] == null)
+            //    {
+            //        json = "{'info':'no'}";
+            //    }
+            //    else
+            //        json = "{'info':'yes'}";
 
-            }
+            //}
             context.Response.Write(json);
-
         }
 
         public bool IsReusable

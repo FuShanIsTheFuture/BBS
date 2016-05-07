@@ -53,5 +53,15 @@ namespace BLL
 
             return dal.GetModel(Uid);
         }
+
+        /// <summary>
+        /// 判断是否为管理员
+        /// </summary>
+        /// <param name="n">用户编号</param>
+        /// <returns>管理员编号</returns>
+        public int IfAdmin(int n)
+        {
+            return dal.IfAdmin(n);
+        }
     }
 }

@@ -61,24 +61,25 @@
 }
 
 .ch-img-1 { 
-	background-image: url(../images/1.jpg);
+	background-image: url(../images/dq2C-fxriqqx2535898.jpg);
 }
 
 .ch-img-2 { 
-	background-image: url(../images/2.jpg);
+	background-image: url(../images/p1.jpg);
 }
 
 .ch-img-3 { 
-	background-image: url(../images/3.jpg);
+	background-image: url(../images/p3.jpg);
 }
 .ch-img-4 { 
-	background-image: url(../images/4.jpg);
+	background-image: url(../images/p4.jpg);
 }
 .ch-img-5 { 
-	background-image: url(../images/5.jpg);
+	background-image: url(../images/p5.jpg);
 }
 .ch-img-6{ 
-	background-image: url(../images/6.jpg);
+	background-image: url(../images/p2.jpg);
+    background-size:100% 90%;
 }
 .ch-info h3 {
 	color: #fff;

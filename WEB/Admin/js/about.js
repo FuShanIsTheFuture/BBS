@@ -4,40 +4,52 @@
     if (r != null) return unescape(r[2]); return null; //返回参数值
 }
 
+function yanzheng() {
+    //判断是否事先登录
+    $.ajax({
+        type: "Post",
+        url: "ashx/pages.ashx",
+        data: { "Action": "Load" },
+        dataType: "text",
+        success: function (data) {
+            //返回类型为text时 要处理一下 \
+            var json = eval('(' + data + ')');
+            if (json.info == 'no') {
+                alert('请先登录');
+                window.location.href = "login.html";
+            }
+            else { }
+        },
+
+    });
+    
+}
 //操作回帖的内容
 function reply() {
     var tid = getUrlParam('tid');//主贴的编号
     var sid = getUrlParam('sid');//获取板块编号
     var txtreply = $("#txtreply").val();//获取回帖的内容
     var txttitle = $("#replytitle").val();//获取回帖的主题
-    $.ajax({
-        type: "Post",
-        url: "ashx/ABOUT.ashx",
-        data: { "Action": "reply", "txtreply":txtreply,"txttitle":txttitle,"tid":tid,"sid":sid },
-        dataType: "text",
-        success: function (data) {
-            var json = eval('(' + data + ')');
-            alert(json.info);
-        },
-    })
+    if (txtreply != "" && txttitle != "") {
+        $.ajax({
+            type: "Post",
+            url: "ashx/ABOUT.ashx",
+            data: { "Action": "reply", "txtreply": txtreply, "txttitle": txttitle, "tid": tid, "sid": sid },
+            dataType: "text",
+            success: function (data) {
+                var json = eval('(' + data + ')');
+                alert(json.info);
+            },
+        })
+    }
+    else {
+        alert("输入不正确");
+    }
 }
 
 $(document).ready(function () {
-    $.ajax({
-        type: "Post",
-        url: "ashx/ABOUT.ashx",
-        data: { "Action": "Load" },
-        dataType: "text",
-        success: function (data) {
-            //返回类型为text时 要处理一下 
-            var json = eval('(' + data + ')');
-            if (json.info == 'no') {
-                alert('请先登录');
-                window.location.href = "login.html";
-            }
-        },
 
-    });
+
 
     var Userid = getUrlParam('tid');//获取网址传递过来的参数
     if (Userid != null) {
