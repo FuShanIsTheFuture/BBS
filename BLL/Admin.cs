@@ -63,5 +63,29 @@ namespace BLL
         {
             return dal.IfAdmin(n);
         }
+
+        /// <summary>
+        /// 获得数据列表
+        /// </summary>
+        public DataSet GetList(string strWhere)
+        {
+            return dal.GetList(strWhere);
+        }
+
+        /// <summary>
+        /// 删除多条数据
+        /// </summary>
+        public bool DeleteList(string adminIDlist)
+        {
+            return dal.DeleteList(adminIDlist);
+        }
+
+        /// <summary>
+		/// 更新一条数据
+		/// </summary>
+		public bool Update(Model.Admin model)
+        {
+            return dal.Update(model);
+        }
     }
 }

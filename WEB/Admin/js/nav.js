@@ -10,6 +10,7 @@
             if (jQuery.isEmptyObject(data)) {
                 $("#exit").hide();
                 $("#AdminPlay").hide();
+                $("#NewTopic").hide();
             }
             else {
                 $("#name").append('[' + data.info + '] ');
@@ -33,6 +34,7 @@
                 $("#AdminPlay").show();
             }
             else {
+                $("NewTopic").show();
                 $("#AdminPlay").hide();
             }
         },

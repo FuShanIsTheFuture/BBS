@@ -22,5 +22,15 @@ namespace IDAL
         /// <param name="Uid">用户id</param>
         /// <returns>对象实体</returns>
         Model.BBSTopic GetModel(int Uid);
+
+        DataSet GetList(string strWhere);
+        bool DeleteList(string adminIDlist);
+
+        /// <summary>
+        /// 增加用户
+        /// </summary>
+        /// <param name="model">用户对象</param>
+        /// <returns>用户编号</returns>
+        int add(Model.BBSTopic model);
     }
 }

@@ -22,5 +22,20 @@ namespace BLL
         {
             return dal.GetList(sid, top);
         }
+        /// <summary>
+        /// 获得数据列表
+        /// </summary>
+        public DataSet GetList(string strWhere)
+        {
+            return dal.GetList(strWhere);
+        }
+        /// <summary>
+        /// 删除多条数据
+        /// </summary>
+        public bool DeleteList(string adminIDlist)
+        {
+            return dal.DeleteList(adminIDlist);
+        }
+
     }
 }

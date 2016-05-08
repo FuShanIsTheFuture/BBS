@@ -75,5 +75,81 @@ namespace SQLServerDAL
                 return null;
             }
         }
+
+        /// <summary>
+		/// 获得数据列表
+		/// </summary>
+		public DataSet GetList(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select tid,tuid,TTopic,TContents ");
+            strSql.Append(" FROM BBSTopic ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            return DbHelperSQL.Query(strSql.ToString());
+        }
+
+        /// <summary>
+        /// 批量删除数据
+        /// </summary>
+        public bool DeleteList(string adminIDlist)
+        {
+            StringBuilder strSql = new StringBuilder();
+
+            strSql.Append("delete from BBSTopic ");
+            strSql.Append(" where tid in (" + adminIDlist + ")  ");
+            int rows = DbHelperSQL.ExecuteSql(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 增加一条帖子记录
+        /// </summary>
+        /// <param name="model">帖子实体</param>
+        /// <returns>帖子id</returns>
+        public int add(Model.BBSTopic model)
+        {
+            //获取当前用户的最大编号
+            //string bir = model.UBirthday;
+            string sql = string.Format(@"INSERT INTO [dbo].[BBSTopic]
+           ([tsid]
+           ,[tuid]
+           ,[treplycount]
+           ,[TTopic]
+           ,[TContents]
+           ,[TTime]
+           ,[TClickCount]
+           ,[TLastClickT])
+     VALUES
+           ({0}
+           ,{1}
+           ,{2}
+           ,'{3}'
+           ,'{4}'
+           ,'{5}'
+           ,{6}
+           ,'{7}')",
+            model.Tsid,model.Tuid,model.Treplycount,model.TTopic,model.TContents,model.TTime,model.TClickCount,model.TLastClickT
+           );//为用户表增加数据
+            //sql 字符串类型的值要用‘’。数字、日期类型不需要‘’
+            string sql1 = string.Format(@"select top 1 tid from BBSTopic where TTopic='{0}'", model.TTopic);
+
+            object ob = DbHelperSQL.GetSingle(sql);
+            object ob1 = DbHelperSQL.GetSingle(sql1.ToString());
+            if (ob1 == null) { return 0; }
+            else
+            { return Convert.ToInt32(ob1); }
+
+
+        }
     }
 }

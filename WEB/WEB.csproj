@@ -109,12 +109,19 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Admin\about.html" />
+    <Content Include="Admin\css\Admincss.css" />
+    <Content Include="Admin\js\NewTopic.js" />
+    <Content Include="Admin\js\SectionList.js" />
+    <Content Include="Admin\js\TopicList.js" />
+    <Content Include="Admin\NewTopic.html" />
+    <Content Include="Admin\SectionList.html" />
     <Content Include="Admin\contact.html" />
     <Content Include="Admin\css\bootstrap.css" />
     <Content Include="Admin\css\common.css" />
     <Content Include="Admin\css\style.css" />
     <Content Include="Admin\css\style5.css" />
     <Content Include="Admin\css\swipebox.css" />
+    <Content Include="Admin\AdminPlay.html" />
     <Content Include="Admin\images\1.jpg" />
     <Content Include="Admin\images\10.jpg" />
     <Content Include="Admin\images\11.jpg" />
@@ -185,7 +192,9 @@
     <Content Include="Admin\js\jquery.flexisel.js" />
     <Content Include="Admin\js\jquery.swipebox.min.js" />
     <Content Include="Admin\js\list.js" />
+    <Content Include="Admin\js\list1.js" />
     <Content Include="Admin\js\login.js" />
+    <Content Include="Admin\js\modify.js" />
     <Content Include="Admin\js\nav.js" />
     <Content Include="Admin\js\pages.js" />
     <Content Include="Admin\js\PShow.js" />
@@ -196,6 +205,7 @@
     <Content Include="Admin\js\test.js" />
     <Content Include="Admin\js\TopicContent.js" />
     <Content Include="Admin\login.html" />
+    <Content Include="Admin\modify.html" />
     <Content Include="Admin\nav.html" />
     <Content Include="Admin\PShow.html" />
     <Content Include="Admin\Admin\pages.html" />
@@ -205,8 +215,12 @@
     <Content Include="Admin\ReplyList.html" />
     <Content Include="Admin\single.html" />
     <Content Include="Admin\MainTopic.html" />
+    <Content Include="Admin\TopicList.html" />
+    <Content Include="Admin\UsersList.html" />
+    <Content Include="Admin\UsersModify.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\admin.css" />
+    <Content Include="Content\bootstrap-table.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -230,8 +244,15 @@
     <Content Include="Admin\ashx\NewUser.ashx" />
     <Content Include="Admin\ashx\nav.ashx" />
     <Content Include="Admin\ashx\AdminPlay.ashx" />
+    <Content Include="Admin\ashx\list1.ashx" />
+    <Content Include="Admin\ashx\modify.ashx" />
+    <Content Include="Admin\ashx\SectionList.ashx" />
+    <Content Include="Admin\ashx\TopicList.ashx" />
+    <Content Include="Admin\ashx\NewTopic.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="H1.html" />
+    <Content Include="Scripts\bootstrap-table-zh-CN.min.js" />
+    <Content Include="Scripts\bootstrap-table.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -294,11 +315,20 @@
     <Compile Include="Admin\ashx\list.ashx.cs">
       <DependentUpon>list.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ashx\list1.ashx.cs">
+      <DependentUpon>list1.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ashx\login.ashx.cs">
       <DependentUpon>login.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ashx\modify.ashx.cs">
+      <DependentUpon>modify.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ashx\nav.ashx.cs">
       <DependentUpon>nav.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ashx\NewTopic.ashx.cs">
+      <DependentUpon>NewTopic.ashx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ashx\NewUser.ashx.cs">
       <DependentUpon>NewUser.ashx</DependentUpon>
@@ -308,6 +338,9 @@
     </Compile>
     <Compile Include="Admin\ashx\PShow.ashx.cs">
       <DependentUpon>PShow.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ashx\SectionList.ashx.cs">
+      <DependentUpon>SectionList.ashx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ashx\SHOW.ashx.cs">
       <DependentUpon>SHOW.ashx</DependentUpon>
@@ -320,6 +353,9 @@
     </Compile>
     <Compile Include="Admin\ashx\TopicContent.ashx.cs">
       <DependentUpon>TopicContent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ashx\TopicList.ashx.cs">
+      <DependentUpon>TopicList.ashx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\DataConvertJson.cs" />
     <Compile Include="App_Code\MessageBox.cs" />
@@ -373,6 +409,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\工厂三层-案例BBS资料\BBS\Common\Common.csproj">
+      <Project>{23c3fb3c-7910-4700-9f9e-75be1ed940de}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{e81e0d44-ffdf-4569-a0c6-15ea5b2f6a73}</Project>
       <Name>BLL</Name>

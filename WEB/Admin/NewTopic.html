@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>欢迎来到我的博客</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Quickly Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="../Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/NewTopic.js" type="text/javascript"></script>
+    <!-- //js -->
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- for portfolio -->
+    <link rel="stylesheet" type="text/css" href="css/style5.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <!-- //for portfolio -->
+</head>
+
+<body>
+    <!-- banner-body -->
+    <div class="banner-body abt">
+        <div class="container">
+            <!-- header -->
+            <iframe src="nav.html" frameborder="0" scrolling="no" id="ifr" allowTransparency="true"></iframe>
+            <!-- //header -->
+            <!-- portfolio -->
+            <div class="sign-up-form">
+                <h3>发帖</h3>
+                <p>发现科比身边事</p>
+                <div class="sign-up">
+                    <form action="" onsubmit="return yanzheng()" name="form1">
+                        <div class="sign-u">
+                            <div class="sign-up1">
+                                <h4 class="a" style="text-align:right;padding-right:1em">标题<font color="red">*</font> :</h4>
+                            </div>
+                            <div class="sign-up2">
+                                <input type="text" placeholder=" " required=" " id="ttopic" name="ttopic" />
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="sign-u">
+                            <div class="sign-up1">
+                                <h4 class="a" style="text-align:right;padding-right:1em">内容<font color="red">*</font> :</h4>
+                            </div>
+                            <div class="sign-up2">
+                                <textarea name="tcontents" id="tcontents" style="width:100%;height:8em"></textarea>
+                                <!--<input type="text" placeholder=" " required=" " id="tcontents" name="tcontents" />-->
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="sign-u">
+                            <div class="sign-up1">
+                                <h4 class="a" style="text-align:right;padding-right:1em">所属板块<font color="red">*</font> :</h4>
+                            </div>
+                            <div class="sign-up2" style="padding-top:1.5em">
+                                <!--<input type="radio" name="rsid" value="1" checked="checked" />普通用户
+                                <input type="radio" name="rsid" value="2" />管理员
+                                <input type="radio" name="rsid" value="3" />管理员
+                                <input type="radio" name="rsid" value="4" />管理员
+                                <input type="radio" name="rsid" value="5" />管理员
+                                <input type="radio" name="rsid" value="6" />管理员-->
+
+                                <select id="rsid" name="rsid" style="width:50%;height:2em">
+                                    <option value="1">科比个人纪事</option>
+                                    <option value="2">科比的比赛</option>
+                                    <option value="3">关于湖人队</option>
+                                    <option value="4">科比的家庭</option>
+                                    <option value="5">科比职业生涯</option>
+                                    <option value="6">国内对科比的热情</option>
+                                </select>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <input type="submit" value="提交" id="btnSub">
+                    </form><!--form end-->
+                  
+                </div>
+            </div>
+            <!-- //portfolio -->
+        </div>
+    </div>
+    <!-- footer -->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2016 Quickly. All rights reserved | Design by <a href="#"> Fu_Shan</a></p>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- for bootstrap working -->
+    <script src="js/bootstrap.js"> </script>
+    <!-- //for bootstrap working -->
+</body>
+</html>

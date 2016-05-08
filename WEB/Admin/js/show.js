@@ -4,7 +4,7 @@
     if (r != null) return unescape(r[2]); return null; //返回参数值
 }
 $(document).ready(function () {
-    var Userid = getUrlParam('Uid');//获取网址传递过来的参数
+    var Userid = getUrlParam('UserID');//获取网址传递过来的参数
     if (Userid != null) {
         $.ajax({
             type: "Post",
@@ -21,7 +21,7 @@ $(document).ready(function () {
 
                 var outStr = '<table cellSpacing="0" cellPadding="0" width="100%" border="2" style="border-color:#c34c21">\
                  <caption><h2>用户详细信息</h2></caption>\
-	         	<tr>  <td height="45"  align="right"> 编号：</td> <td align="left" style="padding-left:10px"> ' + data.Uid + ' </td></tr> \
+	         	<tr>  <td height="45"  align="right" > 编号：</td> <td align="left" style="padding-left:10px"> ' + data.Uid + ' </td></tr> \
                 <tr>  <td height="45" align="right"> 姓名：</td> <td align="left" style="padding-left:10px"> ' + data.Uname + ' </td></tr> \
 	          	<tr>  <td height="45" align="right"> 密码：</td> <td align="left" style="padding-left:10px"> ' + data.UPassword + ' </td></tr> \
                 <tr>  <td height="45" align="right"> 邮箱：</td> <td align="left" style="padding-left:10px"> ' + data.UEmail + ' </td></tr> \
@@ -42,7 +42,7 @@ $(document).ready(function () {
             }
         });
     }
-    else { alert('地址有误'); }
+    else { window.history.go(-1);}
 
 
 });

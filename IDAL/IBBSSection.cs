@@ -16,5 +16,10 @@ namespace IDAL
         /// <param name="top">前几条</param>
         /// <returns>数据列表</returns>
         DataSet GetList(int sid, int top);
+
+
+        DataSet GetList(string strWhere);
+        bool DeleteList(string adminIDlist);
+
     }
 }

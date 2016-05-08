@@ -43,6 +43,13 @@ namespace IDAL
         /// <param name="n">用户编号</param>
         /// <returns>管理员编号</returns>
         int IfAdmin(int n);
-      
+
+        DataSet GetList(string strWhere);
+        bool DeleteList(string adminIDlist);
+
+        /// <summary>
+		/// 更新一条数据
+		/// </summary>
+		bool Update(Model.Admin model);
     }
 }

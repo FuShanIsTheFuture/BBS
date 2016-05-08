@@ -153,6 +153,72 @@ namespace SQLServerDAL
                 return Convert.ToInt32(obj);
             }
         }
+        /// <summary>
+		/// 获得数据列表
+		/// </summary>
+		public DataSet GetList(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select Uid,Uname,UEmail,Usex,URegDate ");
+            strSql.Append(" FROM BBSUsers ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            return DbHelperSQL.Query(strSql.ToString());
+        }
+        /// <summary>
+        /// 批量删除数据
+        /// </summary>
+        public bool DeleteList(string adminIDlist)
+        {
+            StringBuilder strSql = new StringBuilder();
+
+            strSql.Append("delete from BBSUsers ");
+            strSql.Append(" where Uid in (" + adminIDlist + ")  ");
+            int rows = DbHelperSQL.ExecuteSql(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+		/// 更新一条数据
+		/// </summary>
+		public bool Update(Model.Admin model)
+        {
+            int sex1 = 0;
+            if (model.Usex) { sex1 = 1; }//用户性别
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("update BBSUsers set ");
+            strSql.Append("Uname='" + model.Uname + "',");
+            strSql.Append("UPassword='" + model.UPassword + "',");
+            strSql.Append("UEmail='" + model.UEmail + "',");
+            strSql.Append("UBirthday='" + model.UBirthday + "',");
+            strSql.Append("Usex=" +sex1 + ",");
+            strSql.Append("UClass=" + model.UClass + ",");
+            strSql.Append("UStatement='" + model.UStatement + "',");
+            strSql.Append("URegDate='" + model.URegDate + "',");
+            strSql.Append("UState=" + model.UState + ",");
+            strSql.Append("UPoint=" + model.UPoint + ",");
+            int n = strSql.ToString().LastIndexOf(",");
+            strSql.Remove(n, 1);
+            strSql.Append(" where Uid=" + model.Uid + "");
+            int rowsAffected = DbHelperSQL.ExecuteSql(strSql.ToString());
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }
