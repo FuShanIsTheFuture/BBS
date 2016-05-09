@@ -25,6 +25,12 @@ namespace BLL
 
             return dal.add(txtreply, txttitle, tid, sid, id);
         }
-        
+        /// <summary>
+        /// 获得数据列表
+        /// </summary>
+        public DataSet GetList(int tid,int top)
+        {
+            return dal.GetList(tid,top);
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace SQLServerDAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select  top 1  ");
-            strSql.Append(" TTopic,tsid,TContents,TClickCount,TLastClickT ");
+            strSql.Append(" TTopic,tsid,TContents,TClickCount,TLastClickT,TGoodCount ");
             strSql.Append(" from BBSTopic ");
             strSql.Append(" where tid =" + Uid + "");
             Model.BBSTopic model = new Model.BBSTopic();
@@ -50,6 +50,7 @@ namespace SQLServerDAL
                 model.TContents = ds.Tables[0].Rows[0][2].ToString();
                 model.TClickCount =int.Parse(ds.Tables[0].Rows[0][3].ToString());
                 model.TLastClickT =DateTime.Parse(ds.Tables[0].Rows[0][4].ToString());
+                model.TGoodCount = int.Parse(ds.Tables[0].Rows[0][5].ToString());
 
                 //更新点击次数
                 StringBuilder strSql1 = new StringBuilder();
@@ -77,12 +78,29 @@ namespace SQLServerDAL
         }
 
         /// <summary>
+        /// 获取前几行主贴轮播
+        /// </summary>
+        /// <returns>数据表</returns>
+        public DataSet GetModels()
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select top 3");
+            strSql.Append(" tid,TTopic,TContents ");
+            strSql.Append(" FROM BBSTopic,BBSSection ");
+            strSql.Append(" where SID=2 and BBSTopic.tsid=BBSSection.SID ");
+            strSql.Append(" order by TTime desc");
+            Model.BBSTopic model = new Model.BBSTopic();
+            DataSet ds = DbHelperSQL.Query(strSql.ToString());
+            return ds;
+        }
+
+        /// <summary>
 		/// 获得数据列表
 		/// </summary>
 		public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select tid,tuid,TTopic,TContents ");
+            strSql.Append("select tid,tuid,TTopic,TTime ");
             strSql.Append(" FROM BBSTopic ");
             if (strWhere.Trim() != "")
             {
@@ -148,8 +166,25 @@ namespace SQLServerDAL
             if (ob1 == null) { return 0; }
             else
             { return Convert.ToInt32(ob1); }
+            
+        }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sid"></param>
+        /// <returns></returns>
+        public bool changegood(int tid)
+        {
+            string sql="select TGoodCount from BBSTopic where tid="+tid;
+            int count = Convert.ToInt32(DbHelperSQL.GetSingle(sql))+1;
+            sql = "update BBSTopic set TGoodCount=" + count + " where tid=" + tid;
+            if (DbHelperSQL.GetSingle(sql) != null)
+            {
+                return true;
+            }
+            else
+                return false;
         }
     }
 }

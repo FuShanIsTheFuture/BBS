@@ -57,5 +57,19 @@ namespace BLL
 
             return dal.add(model);
         }
+
+        public bool changegood(int tid)
+        {
+            return dal.changegood(tid);
+        }
+        /// <summary>
+        /// 获取前几行主贴轮播
+        /// </summary>
+        /// <param name="top">前top行</param>
+        /// <returns>数据表</returns>
+        public DataSet GetModels()
+        {
+            return dal.GetModels();
+        }
     }
 }

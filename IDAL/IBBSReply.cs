@@ -19,6 +19,12 @@ namespace IDAL
         /// <param name="id">用户编号</param>
         /// <returns>回帖编号</returns>
         int add(string txtreply, string txttitle, int tid, int sid, int id);
-        
+
+        /// <summary>
+        /// 获取最新几个回帖
+        /// </summary>
+        /// <param name="top">前top个</param>
+        /// <returns></returns>
+        DataSet GetList(int tid,int top);
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DBUtility;
+using System.Data;
 
 namespace SQLServerDAL
 {
@@ -39,6 +40,26 @@ namespace SQLServerDAL
                 return Convert.ToInt32(obj);
             }
             return -1;
+        }
+
+        /// <summary>
+        /// 返回前几条回帖记录
+        /// </summary>
+        /// <param name="Top">前TOP条</param>
+        /// <returns></returns>
+        public DataSet GetList(int tid,int Top)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select ");
+            if (Top > 0)
+            {
+                strSql.Append(" top " + Top.ToString());
+            }
+            strSql.Append(" RUID,RTopic,RContents ");
+            strSql.Append(" FROM BBSReply ");
+            strSql.Append(" where RTID="+tid+" ");
+            strSql.Append(" order by RTime desc");
+            return DbHelperSQL.Query(strSql.ToString());
         }
     }
 }

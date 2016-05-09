@@ -110,6 +110,26 @@
     <Content Include="About.aspx" />
     <Content Include="Admin\about.html" />
     <Content Include="Admin\css\Admincss.css" />
+    <Content Include="Admin\css\jquery.hrzAccordion.defaults.css" />
+    <Content Include="Admin\css\jquery.hrzAccordion.examples.css" />
+    <Content Include="Admin\images\20160509134827.png" />
+    <Content Include="Admin\images\23.JPEG" />
+    <Content Include="Admin\images\banner2.jpg" />
+    <Content Include="Admin\images\banner3.jpg" />
+    <Content Include="Admin\images\com_01.gif" />
+    <Content Include="Admin\images\com_02.gif" />
+    <Content Include="Admin\images\com_03.gif" />
+    <Content Include="Admin\images\com_04.gif" />
+    <Content Include="Admin\images\com_05.gif" />
+    <Content Include="Admin\images\mylogo.JPG" />
+    <Content Include="Admin\images\pattern.jpg" />
+    <Content Include="Admin\images\thumbs-up.png" />
+    <Content Include="Admin\js\jquery-1.3.2.js" />
+    <Content Include="Admin\js\jquery-1.3.2.min.js" />
+    <Content Include="Admin\js\jquery.easing.1.3.js" />
+    <Content Include="Admin\js\jquery.hrzAccordion.examples.js" />
+    <Content Include="Admin\js\jquery.hrzAccordion.js" />
+    <Content Include="Admin\js\jquery.hrzAccordion.min.js" />
     <Content Include="Admin\js\NewTopic.js" />
     <Content Include="Admin\js\SectionList.js" />
     <Content Include="Admin\js\TopicList.js" />
@@ -125,29 +145,14 @@
     <Content Include="Admin\images\1.jpg" />
     <Content Include="Admin\images\10.jpg" />
     <Content Include="Admin\images\11.jpg" />
-    <Content Include="Admin\images\14.jpg" />
-    <Content Include="Admin\images\15.jpg" />
-    <Content Include="Admin\images\16.jpg" />
-    <Content Include="Admin\images\17.jpg" />
-    <Content Include="Admin\images\18.jpg" />
-    <Content Include="Admin\images\19.jpg" />
     <Content Include="Admin\images\2.jpg" />
-    <Content Include="Admin\images\20.jpg" />
-    <Content Include="Admin\images\21.jpg" />
-    <Content Include="Admin\images\22.jpg" />
     <Content Include="Admin\images\3.jpg" />
     <Content Include="Admin\images\4.jpg" />
     <Content Include="Admin\images\5.jpg" />
     <Content Include="Admin\images\6.jpg" />
-    <Content Include="Admin\images\7-.jpg" />
     <Content Include="Admin\images\7.jpg" />
-    <Content Include="Admin\images\8-.jpg" />
     <Content Include="Admin\images\8.jpg" />
-    <Content Include="Admin\images\9-.jpg" />
     <Content Include="Admin\images\9.jpg" />
-    <Content Include="Admin\images\b1.gif" />
-    <Content Include="Admin\images\b2.gif" />
-    <Content Include="Admin\images\b3.gif" />
     <Content Include="Admin\images\banner.jpg" />
     <Content Include="Admin\images\better1.jpg" />
     <Content Include="Admin\images\better2.jpg" />
@@ -174,7 +179,6 @@
     <Content Include="Admin\images\p5.jpg" />
     <Content Include="Admin\images\p6.jpg" />
     <Content Include="Admin\images\p7.jpg" />
-    <Content Include="Admin\images\pattern.jpg" />
     <Content Include="Admin\images\shuffling1.jpg" />
     <Content Include="Admin\images\shuffling2.jpg" />
     <Content Include="Admin\images\shuffling3.jpg" />
@@ -208,11 +212,9 @@
     <Content Include="Admin\modify.html" />
     <Content Include="Admin\nav.html" />
     <Content Include="Admin\PShow.html" />
-    <Content Include="Admin\Admin\pages.html" />
     <Content Include="Admin\Section.html" />
     <Content Include="Admin\NewUser.html" />
     <Content Include="Admin\show.html" />
-    <Content Include="Admin\ReplyList.html" />
     <Content Include="Admin\single.html" />
     <Content Include="Admin\MainTopic.html" />
     <Content Include="Admin\TopicList.html" />
@@ -249,6 +251,7 @@
     <Content Include="Admin\ashx\SectionList.ashx" />
     <Content Include="Admin\ashx\TopicList.ashx" />
     <Content Include="Admin\ashx\NewTopic.ashx" />
+    <Content Include="Admin\ashx\index.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="H1.html" />
     <Content Include="Scripts\bootstrap-table-zh-CN.min.js" />
@@ -311,6 +314,9 @@
     </Compile>
     <Compile Include="Admin\ashx\exit.ashx.cs">
       <DependentUpon>exit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ashx\index.ashx.cs">
+      <DependentUpon>index.ashx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ashx\list.ashx.cs">
       <DependentUpon>list.ashx</DependentUpon>

@@ -58,6 +58,27 @@ namespace WEB.Admin.ashx
                 }
                 context.Response.Write(json);
             }
+            else if (action == "good")
+            {
+                BLL.BBSTopic bll = new BLL.BBSTopic();
+                int tid = int.Parse(context.Request.Form["tid"]);
+                if (bll.changegood(tid))
+                {
+                    json = "{'info':'点赞成功！'}";
+                }
+                else
+                    json = "{'info':'点赞失败！'}";
+            }
+            else if (action == "ShowReply")
+            {
+                BLL.BBSReply bll = new BLL.BBSReply();
+                int tid = int.Parse(context.Request.Form["TID"]);
+                DataSet ds = bll.GetList(tid,3);//调用业务逻辑层的方法
+                ds.Tables[0].TableName = "Admin";//为数据表改名
+                                                 //返回列表
+                json = WEB.DataConvertJson.DataTable2Json(ds.Tables[0]);//调用把datatable转为json的方法
+                context.Response.Write(json);
+            }
            
         }
 

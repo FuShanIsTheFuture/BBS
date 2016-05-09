@@ -19,7 +19,8 @@
                     //   $("#result").val(json); 
                     alert(json.info + " 编号为：" + json.ID);
                     
-                    window.location.href = "index.html";//页面跳转
+                    //window.location.href = "index.html";//页面跳转
+                    window.history.go(-1);
                 },
                 error: function (err) {
                     alert(err);

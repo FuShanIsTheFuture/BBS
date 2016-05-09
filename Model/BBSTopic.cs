@@ -19,6 +19,7 @@ namespace Model
         private DateTime tTime;
         private int tClickCount;
         private DateTime tLastClickT;
+        private int tGoodCount;
 
         public int Tid
         {
@@ -134,6 +135,19 @@ namespace Model
             set
             {
                 tLastClickT = value;
+            }
+        }
+
+        public int TGoodCount
+        {
+            get
+            {
+                return tGoodCount;
+            }
+
+            set
+            {
+                tGoodCount = value;
             }
         }
 

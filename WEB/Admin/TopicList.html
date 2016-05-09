@@ -64,11 +64,18 @@
                             <th data-field="tid" data-sortable="true" data-align="center">帖子编号</th>
                             <th data-field="tuid" data-align="center">帖子用户编号</th>
                             <th data-field="TTopic" data-align="center">帖子标题</th>
-                            <th data-field="TContents" data-align="center">帖子内容</th>
+                            <th data-field="TTime" data-align="center" id="textlen">发帖时间</th>
                             <th data-field="SID" data-align="center" data-formatter="editFormatter">操作</th>
                         </tr>
                     </thead>
                 </table>
+                <!--<script type="text/javascript">
+                    var curlength = $("table td").val().length;
+                    if (curlength > 15) {
+                        var num = $("table td").val().substr(0, 15)+"...";
+                        $("table td").val(num);
+                    }
+                </script>-->
             </div>
             <button id="BtnDel">删除</button>
             <!--<input id="BtnDel" type="button" value="删除" style="float:left;" />-->

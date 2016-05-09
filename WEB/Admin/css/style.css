@@ -35,6 +35,20 @@ ul,label{
 #AdminPlay:hover{
     color:#333;
 }
+#contactMain{
+    padding-left:80px
+}
+#contactMain button{
+    background-color:#c34c21;
+    color:#fff;
+    padding:10px 15px;
+}
+#contactMain #myself h5{
+    padding-top:20px;
+}
+#kobe h5{
+    padding-top:10px
+}
 body a:hover{
 	text-decoration:none;
 }
@@ -42,6 +56,9 @@ body a:hover{
 .banner-body{
 	padding:6em 0 0;
 	background:url(../images/pattern.jpg) 0px 0px;
+    background-position:center;
+    background-size:100% 100%;
+    background-position:unset
 }
 /*-- //banner-body --*/
 /*-- header --*/
@@ -61,6 +78,13 @@ body a:hover{
 #line div{
     height:45px;
 }
+.about-info h5{
+    text-align:center;
+    color:#777;
+}
+.about-info h5 button{
+margin-left:20px
+}
 
 .navbar-default {
   background:none !important;
@@ -76,7 +100,7 @@ a.navbar-brand:hover {
 	text-decoration: none;
 }
 .navbar-nav {
-  margin: 0 0 0 5em;
+  margin: 0 0 0 15em;
 }
 .navbar-default .navbar-nav > li > a {
   color: #777;
@@ -228,13 +252,11 @@ a.navbar-brand:hover {
 }
 /*-- banner --*/
 .banner{
-	background:url(../images/banner.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	-ms-background-size:cover;
-	min-height:500px;
 }
 .banner-inf{
 	padding:1em;
@@ -2097,6 +2119,9 @@ p.lom{
 	}
 }
 @media (max-width:767px){
+    #ifr{
+        height:220px
+    }
 	.navbar-default .navbar-toggle {
 	  border-color: #C34C21;
 	}

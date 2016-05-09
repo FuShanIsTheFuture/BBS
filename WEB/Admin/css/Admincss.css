@@ -1,3 +1,9 @@
 ﻿#PlayList h3{
     text-align:center
 }
+#container{
+    clear:both;
+    width:90%;
+    padding-bottom:5em;
+    
+}
